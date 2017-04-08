@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="anotherCtrl as vm">
+<h2>{{vm.other}}</h2>
+
+<hello-component></hello-component>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/helloComponent/hello.component.js"></script>
+</body>
+</html>

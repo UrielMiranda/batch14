@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myTube">
+<head>
+    <meta charset="UTF-8">
+    <title>My Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="videoList as vm">
+
+<section>
+    <my-player
+            ng-repeat="video in vm.videos"
+            video-id="video.id">
+    </my-player>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/controllers/videos.controller.js"></script>
+<script src="app/components/myPlayerComponent/myplayer.component.js"></script>
+</body>
+</html>
