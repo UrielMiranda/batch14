@@ -42,7 +42,16 @@
         function milliseconds(ms) {
             var min  = Math.floor((ms/1000/60));
             var sec = Math.floor((ms/1000)%60);
-            return min + ":" + sec;
+
+            if(result){
+               min = hola()
+            }else{
+               min =  hello()
+            }
+
+            return min = result ? hola() : hello()
+            //return min + ":" + sec  ;
+            "30:20"
         }
 
     }
