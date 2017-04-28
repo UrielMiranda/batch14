@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="darth">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="app/theme/theme.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+
+<section class="row">
+    <div class="col s4">
+        <darth-component message=""></darth-component>
+    </div>
+    <div class="col s4">
+        <leia-component message="'Hey'"></leia-component>
+    </div>
+    <div class="col s4">
+        <luke-component message="'Oh'"></luke-component>
+    </div>
+</section>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/components/darth.component.js"></script>
+<script src="app/components/leia.component.js"></script>
+<script src="app/components/luke.component.js"></script>
+</body>
+</html>
