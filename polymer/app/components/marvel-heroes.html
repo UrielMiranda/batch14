@@ -1,0 +1,57 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/iron-image/iron-image.html">
+
+
+<style>
+    .container{
+        text-align: center;
+        background: url("space.jpg") center center fixed;
+    }
+</style>
+
+<dom-module id="marvel-heroes">
+    <template>
+        <div class="container">
+            <template is="dom-repeat" items="{{response.data.results}}">
+                <paper-card heading="{{item.name}}">
+                    <div class="card-content">
+                        <iron-image style="width:300px; height:300px;" sizing="cover"
+                        src="{{item.thumbnail.path}}.{{item.thumbnail.extension}}">
+                        </iron-image>
+                    </div>
+                    <div class="card-actions">
+                        <paper-button>Some Actions</paper-button>
+                    </div>
+                </paper-card>
+
+            </template>
+        </div>
+        <iron-ajax
+        auto
+        url="http://gateway.marvel.com/v1/public/characters"
+        params='{"apikey":"4339f97c8d2f4e6b58223609ccd215b8","ts":"1","hash":"a00641a5c54db3011f573060d17696d3","limit":"100"}'
+        on-response="handleResponse"
+        last-response="{{response}}">
+        </iron-ajax>
+    </template>
+</dom-module>
+
+
+<script>
+    Polymer({
+        is:'marvel-heroes',
+        properties:{
+            response:{
+                type: Object
+            }
+        },
+        handleResponse: function(request){
+            console.log(request.detail.response.data);
+        }
+    })
+
+</script>
+
